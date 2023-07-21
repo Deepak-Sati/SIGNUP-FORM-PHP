@@ -1,18 +1,18 @@
 # SignUpForm-Validation-Server-PHP
 
-Firstly you need to set-up a server which provides you with localhost
+Set-up a server which provides you with localhost
 
-You could use any software for the same , I personally use XAMPP due to following reasons
+XAMPP
 
-1. Provides you with APACHE server(localhost)
-2. Provides with PHPMYADMIN for reading/writing values into database.
-3. Provides with SQL to implement queries on data of database.
+1. Provides APACHE server(localhost)
+2. Provides PHPMYADMIN for reading/writing values into database.
+3. Provides SQL to implement queries on data of database.
 
-To SETUP 
+SETUP 
 
 1. Download XAMPP
 2. Create a .php file sign up form (html+php) for form validation
-3. Create a .css file if you want to style your php file
+3. Create a .css file style your php file
 4. Save both the files in the XAMPP/htdocs/dashboard/your_file
 
 To RUN file on SERVER
