@@ -1,0 +1,105 @@
+1. IMPORTING
+
+<?php include 'work.php'; ?>
+<?php
+namespace prohect
+?>
+
+2. PRINTING
+
+echo " hello \"hi\" there" . "append" , "doesnt append only print";             //preferred
+print_r(" hello \"hi\" there" . "append");
+
+3. VARIABLES
+
+$a=10;
+$variable="hi";
+**  = power
+if() elseif($x>10)
+
+4. FUNCTIONS
+
+function test($a , $b="default"){
+return $a.$b;
+}
+$x=test(3,"HI");
+$a=10;
+$v= &$a;                                                                         //Call by reference
+
+5. STRING / STL
+
+getttype($a)                                                                     //prints datatype
+var_dump($a)                                                                     //prints datatype , size , a itself
+
+echo strrev("kapeeD") , strtolower("SOON") , strtoupper("soon") , str_repeat("There\n",3) , substr_count($a,"really");
+echo abs(-10.99) , round(1.5) , ceil(1.32);                                      //Prints 10.99 , 2 , 2
+echo getrandmax() , rand() , rand(1,52);                                         //Prints max , random value , random btw 1 and 52
+
+str_pad(string,length,pad_string,pad_type)
+$a = 29;
+$b = "You did it!";
+$d = "*~*";
+echo str_pad($b, $a, $d, STR_PAD_BOTH);
+
+6.ARRAY
+
+$a=array(1,"string",2.2);  or  $a=[1,"string",2.2];
+echo count($a);
+foreach($b as $a)
+    echo "$b";
+echo implode(",",$array);                                                         //Converts array into string glued by comma
+array_push($a,1,2);     (end)        array_unshift($a,1,2);     (front)
+array_pop($a);          (end)        arra_shift($a)             (front)
+
+7. MAP
+
+$a=array("0"=>1,"1"=>2);  or  $a=["0"=>1,"1"=>2];
+$newa=array_keys($a);                                                             //Getting all the keys
+unset($a["0"]);                                                                   //Removes the 1 pair permanently
+$append=$a + $newa;                                                               //Adds unique keys from newa directly to a
+
+8. FORM HANDLING
+
+$_GET       ( <form method="get"></form>               <p>Value is = <?=$_GET['name'];?> </p>         )
+$_POST      ( <form method="post"></form> )            <p>Value is = <?=$_POST['name'];?> </p>        )
+$_REQUEST   ( <form method="request"></form> )         when both get and post form are used within same html
+
+<form method="get/post" action="text.php"></form>      to include text.php in current form 
+$_SERVER["REQUEST_METHOD"] == "POST"
+$_SERVER["PHP_SELF"]
+
+!preg_match( "/^[A-Za-z ]*$/" , $name)
+^    =  starts with
+$    =  ends with
+/ /  =  begin-end of expression
++    =  Atleast once
+*    =  As many times
+
+9. DEMO CONNECT PHP-MYSQL
+
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+
+$conn->close();
+?>
+
+
+
+
